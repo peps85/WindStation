@@ -27,7 +27,7 @@ This is a demonstration of how Message Queuing Telemetry Transport (MQTT) networ
 ## Running
 Install the required modules:
 ```sh
-node app.js
+npm install
 ```
 
 Start the mqtt client:
@@ -37,7 +37,7 @@ node app.js
 
 Start the react application:
 ```sh
-node start
+npm start
 ```
 
 This app expects any of the following JSON parameters from the broker:
@@ -61,6 +61,11 @@ npm install mqtt -g
 ```
 
 Here is an example of a valid publish command:
+
+From linux mosquitto client:
+```sh
+mosquitto_pub -h test.mosquitto.org -t "app" -m '{"name": "Rome", "temp": 18, "humidity": 92, "pressure": 18.95, "windspeed": 14.5, "winddirection": "NW"}'
+```
 
 ```sh
 mqtt pub -u 'USERNAME' -P 'PASSWORD' -h 'SERVER' -t 'app' -m '{"name": "houston", "temp": 79, "humidity": 88, "pressure": 28.95, "windspeed": 7.5, "winddirection": "SW"}'
