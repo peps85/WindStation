@@ -25,6 +25,21 @@ This is a demonstration of how Message Queuing Telemetry Transport (MQTT) networ
     ```
 
 ## Running
+Install the required modules:
+```sh
+node app.js
+```
+
+Start the mqtt client:
+```sh
+node app.js
+```
+
+Start the react application:
+```sh
+node start
+```
+
 This app expects any of the following JSON parameters from the broker:
 
 ```sh
