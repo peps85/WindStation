@@ -15,16 +15,14 @@ This is a demonstration of how Message Queuing Telemetry Transport (MQTT) networ
 
 
 ## Prerequisites
-* An MQTT broker needs to be accessible for this project. I'm using [Eclipse Mosquitto](https://mosquitto.org/) deployed to a VPS, but cloud-baed MQTT brokers are available such as [AWS IoT](https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html).
+* An MQTT broker needs to be accessible for this project. I'm using [Test Mosquitto](https://test.mosquitto.org/).
   * Server environment variables:
    ```javascript
-    MQTT_SERVER='wss://your.server.com:port'
-    MQTT_USERNAME=username
-    MQTT_PASSWORD=password
+    MQTT_SERVER='mqtt://your.server.com:port'
+    PORT= 1883
+    //MQTT_USERNAME=username
+    //MQTT_PASSWORD=password
     ```
-
-* WiFi equipped sensors: e.g. [Particle Photon](https://www.particle.io/products/hardware/photon-wifi/) or [Adafruit WICED Feather](https://www.adafruit.com/product/3056). Alternatively, MQTT publishing can be done from a shell, see [notes on running](#running).
-
 
 ## Running
 This app expects any of the following JSON parameters from the broker:
